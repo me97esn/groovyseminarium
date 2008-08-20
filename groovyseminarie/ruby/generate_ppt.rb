@@ -39,8 +39,8 @@ def replace(ole_shape, ole_slide)
   # Skapa en länk
   onClick = 1
   link = 7
-  textRange.ActionSettings.Item(onClick).Action = link
-  textRange.ActionSettings.Item(onClick).Hyperlink.Address = "C:/programmering/workspace/groovyseminarie/ruby/run_groovy_script.rb"
+  ole_shape.ActionSettings.Item(onClick).Action = link
+  ole_shape.ActionSettings.Item(onClick).Hyperlink.Address = "C:/programmering/workspace/groovyseminarie/ruby/run_groovy_script.rb"
 
 end
 
@@ -50,4 +50,4 @@ replaceCodeAnchors
 @pre.SlideShowSettings.Run
 
 # close powerpoint, will close all the currently open files
-ppt.Quit()
+#ppt.Quit()

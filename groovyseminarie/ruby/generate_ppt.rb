@@ -8,12 +8,12 @@ ppt.Visible = true
 def replaceCodeAnchors
   @pre.Slides.each{|slide|
   slide.Shapes.each{|shape|
-    replace( shape ) if shape.TextFrame.TextRange.Text =~ /\[.*\]/ 
+    replace( shape, slide ) if shape.TextFrame.TextRange.Text =~ /\[.*\]/ 
   }
 }
 end
 
-def replace(ole_shape) 
+def replace(ole_shape, ole_slide) 
   fileName = ole_shape.TextFrame.TextRange.Text
   fileName["["]=""
   fileName["]"]=""
@@ -23,17 +23,25 @@ def replace(ole_shape)
   File.open(fileUrl, "r").each{|l| text += l }
   
   # Sätt texten
-  ole_shape.TextFrame.TextRange.Text = text
-  ole_shape.TextFrame.TextRange.Font.Name = "Courier NEW";
-  ole_shape.TextFrame.TextRange.Font.Size = 15;
-  ole_shape.TextFrame.TextRange.ParagraphFormat.Alignment = 1 # left
+  textRange = ole_shape.TextFrame.TextRange
+  font = textRange.Font
+  textRange.Text = text
+  font.Name = "Courier NEW";
+  font.Size = 15;
+#  p font.Color.ole_methods
+#  p font.ole_methods
+  
+  textRange.ParagraphFormat.Alignment = 1 # left
+  
+  p ole_shape.TextFrame.TextRange.Font.ole_methods
+  
   
   # Skapa en länk
-#  p ole_shape.TextFrame.TextRange.Item(MouseClick)
-
   onClick = 1
-  ole_shape.TextFrame.TextRange.ActionSettings.Item(onClick).Action = 9
-  ole_shape.TextFrame.TextRange.ActionSettings.Item(onClick).Hyperlink.Address = "C:/programmering/workspace/groovyseminarie/ruby/run_groovy_script.rb"
+  link = 7
+  textRange.ActionSettings.Item(onClick).Action = link
+  textRange.ActionSettings.Item(onClick).Hyperlink.Address = "C:/programmering/workspace/groovyseminarie/ruby/run_groovy_script.rb"
+
 end
 
 replaceCodeAnchors
@@ -42,4 +50,4 @@ replaceCodeAnchors
 @pre.SlideShowSettings.Run
 
 # close powerpoint, will close all the currently open files
-#ppt.Quit()
+ppt.Quit()

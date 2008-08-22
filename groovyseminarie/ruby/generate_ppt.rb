@@ -17,8 +17,14 @@ def replace(ole_shape, ole_slide)
   fileName = ole_shape.TextFrame.TextRange.Text
   fileName["["]=""
   fileName["]"]=""
-  fileName += ".groovy"
-  fileUrl = "C:/programmering/workspace/groovyseminarie/src/se/britech/groovySeminarie/groovy/#{fileName}"
+#  fileName += ".groovy"
+  fileUrl = ""
+  if fileName =~ /\.groovy/
+    fileUrl = "C:/programmering/workspace/groovyseminarie/src/se/britech/groovySeminarie/groovy/#{fileName}"
+  else
+    fileUrl = "C:/programmering/workspace/groovyseminarie/src/se/britech/groovySeminarie/java/#{fileName}"
+  end
+  
   text = "#{fileName}\n-------------------------------------------\n"
   File.open(fileUrl, "r").each{|l| text += l }
   
@@ -33,19 +39,28 @@ def replace(ole_shape, ole_slide)
   
   textRange.ParagraphFormat.Alignment = 1 # left
   
-  p ole_shape.TextFrame.TextRange.Font.ole_methods
-  
-  
   # Skapa en länk
   onClick = 1
   link = 7
   ole_shape.ActionSettings.Item(onClick).Action = link
-  ole_shape.ActionSettings.Item(onClick).Hyperlink.Address = "C:/programmering/workspace/groovyseminarie/ruby/run_groovy_script.rb"
+  rubyScriptName = "run_#{fileName}_script.rb"
+  adress = "C:/programmering/workspace/groovyseminarie/ruby/generated/#{rubyScriptName}"
+  ole_shape.ActionSettings.Item(onClick).Hyperlink.Address = adress
+  
+  generate_ruby_script fileUrl, adress
+end
 
+def generate_ruby_script(groovyFile, rubyFile)
+  p rubyFile
+  f = File.new(rubyFile, "w+")
+  f.puts "groovy #{groovyFile}"
+  f.close
 end
 
 replaceCodeAnchors
 
+# Spara som en annan fil så att vi inte råkar spara över orginalet
+@pre.SaveAs "C:/programmering/workspace/groovyseminarie/dokument/generated/generated.pptx"
 #  Run
 @pre.SlideShowSettings.Run
 

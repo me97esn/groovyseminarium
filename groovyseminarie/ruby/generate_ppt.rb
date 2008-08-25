@@ -51,10 +51,10 @@ def replace(ole_shape, ole_slide)
 end
 
 def generate_ruby_script(groovyFile, rubyFile)
-  p rubyFile
-  f = File.new(rubyFile, "w+")
-  f.puts "groovy #{groovyFile}"
-  f.close
+#  p rubyFile
+#  f = File.new(rubyFile, "w+")
+#  f.puts "groovy #{groovyFile}"
+#  f.close
 end
 
 replaceCodeAnchors

@@ -4,7 +4,7 @@ class FileInIde
     a = WIN32OLE.new("AutoItX3.Control")
     a.WinActivate "Java"
     a.Send "^+r"
-    a.Send "helloWorld.groovy"
+    a.Send name
     a.Send "{Enter}"
   end
 end

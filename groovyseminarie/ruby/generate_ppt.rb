@@ -18,7 +18,6 @@ def replace(ole_shape, ole_slide)
     fileName = ole_shape.TextFrame.TextRange.Text
     fileName["["]=""
     fileName["]"]=""
-    p "replace #{fileName}"
     #  fileName += ".groovy"
     fileUrl = ""
     if fileName =~ /\.groovy/

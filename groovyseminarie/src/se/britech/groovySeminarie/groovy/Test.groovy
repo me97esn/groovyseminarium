@@ -1,12 +1,7 @@
-/**
- * 
- */
 package se.britech.groovySeminarie.groovy
-
-
-
-/**
- * @author emil.sandin
- *
- */
-print 1
+Pizza.order{ 
+	size large
+	topping olives, pepper, salami
+	adress "Gamla brogatan 11"
+	payment visa, ’1234-1234-1234-1234
+}

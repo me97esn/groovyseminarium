@@ -26,8 +26,8 @@ def replace(ole_shape, ole_slide)
       fileUrl = "C:/programmering/workspace/groovyseminarie/src/se/britech/groovySeminarie/java/#{fileName}"
     end
     
-    text = "#{fileName}\n-------------------------------------------\n"
-    File.open(fileUrl, "r").each{|l| text += l }
+    text = ""
+    File.open(fileUrl, "r").each{|l| text += l unless l =~ /^package /}
     
     # Sätt texten
     textRange = ole_shape.TextFrame.TextRange

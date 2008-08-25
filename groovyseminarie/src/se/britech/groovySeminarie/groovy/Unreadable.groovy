@@ -1,6 +1,6 @@
 package se.britech.groovySeminarie.groovy
 
-// Använd metaClass för att överlagra en metod 
+// Överlagra metoden "+" i Integer
 Integer.metaClass.invokeMethod ={name, args-> 
 	if (name == "plus") {
 		print "$delegate + ${args?.getAt(0)} = "
@@ -8,5 +8,5 @@ Integer.metaClass.invokeMethod ={name, args->
 	}
 }
 
-// Nu betyder det här 1-1, mao är koden inte längre läslig
+// Nu betyder det här 1-1, koden är inte längre läslig
 print 1+1

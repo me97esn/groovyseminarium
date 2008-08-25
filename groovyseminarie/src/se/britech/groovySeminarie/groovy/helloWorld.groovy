@@ -1,2 +1,6 @@
 package se.britech.groovySeminarie.groovy
-3.time{print "hej"}
+public class HelloWorld {
+	public static void main(String[] args) {
+		System.out.println("Hello");
+	}
+}

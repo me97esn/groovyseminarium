@@ -3,7 +3,7 @@ require 'win32ole'
 ppt = WIN32OLE.new('Powerpoint.Application')
 ppt.Visible = true
 @pre = ppt.presentations.Open("C:/programmering/workspace/Groovyseminarie/dokument/groovyseminarium_source.pptx")
-@regexp = /\[.*\]/
+@regexp = /\[\w+\.\w+\]/
 
 def replaceCodeAnchors
   @pre.Slides.each{|slide|
@@ -28,7 +28,7 @@ def replace(ole_shape, ole_slide)
     end
     
     text = ""
-    File.open(fileUrl, "r").each{|l| text += l unless l =~ /^package /}
+    File.open(fileUrl, "r").each{|l| text += l unless l =~ /^package / or l =~ /^import / }
     
     # Sätt texten
     textRange = ole_shape.TextFrame.TextRange

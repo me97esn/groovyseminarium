@@ -1,7 +1,23 @@
 package se.britech.groovySeminarie.groovy
+import com.thoughtworks.xstream.annotations.*
+import com.thoughtworks.xstream.*
+
 
 enum Meal {
 	BREAKFAST, LUNCH, DINNER
+}
+
+@XStreamAlias("person")
+class AnnotatedClass {
+    @XStreamAsAttribute
+    @XStreamAlias('first-name')
+    String firstname
+
+    @XStreamAlias('surname')
+    String lastname
+
+    @XStreamOmitField
+    String position
 }
 
 class GroovyWithJava5Features{
@@ -15,7 +31,7 @@ class GroovyWithJava5Features{
 		
 		print "foreach:"
 		for (String string : genericList) {
-			print "${genericList},"
+			print "${string},"
 		}
 		println ""
 	}
@@ -27,8 +43,34 @@ class GroovyWithJava5Features{
 	def print_autoboxing(){
 		Integer i = 1
 		println i
+		int i2 = new Integer(1)
+		println i2
+	}
+	
+	def foo1(int a, int... b){
+		println "inparametrar: $a och $b"
+	}
+	
+	def foo2(int a, int[] b){
+		println "inparametrar: $a och $b"
+	}
+	
+	def print_varargs(){
+		foo1(1,2,3,4,5)
+		foo2(1,2,3,4,5)
+	}
+	
+	def print_annotations(){
+		def xstream = new XStream()
+		def msg = new AnnotatedClass(firstname:'Sarah',
+                lastname:'Connor',
+                position:'Protector')
+		Annotations.configureAliases(xstream, AnnotatedClass)
+		println xstream.toXML(msg)
 	}
 }
+
+// Kör alla metoderna
 print GroovyWithJava5Features.class.methods.each{
 	if(!it.parameterTypes && it.name =~ /print_/){
 		println "******** ${it.name} ************"

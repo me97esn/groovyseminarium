@@ -28,9 +28,12 @@ class GroovyWithJava5Features{
 		genericList << 1
 		
 		println genericList
-		
-		print "foreach:"
-		for (String string : genericList) {
+		genericList
+
+	}
+	
+	def print_foreach(){
+		for (String string : print_generics()) {
 			print "${string},"
 		}
 		println ""

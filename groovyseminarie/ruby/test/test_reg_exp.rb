@@ -6,6 +6,8 @@ class TestRegExp < Test::Unit::TestCase
   
   def test_find
     assert @regexp =~ "[helloWorld.groovy]"
+    assert @regexp =~ "[helloWorld.groovy]\r"
+    assert @regexp =~ "HelloWorld.java\r[helloWorld.java]"
   end
   
   def test_no_find

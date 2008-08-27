@@ -3,12 +3,12 @@ require 'win32ole'
 ppt = WIN32OLE.new('Powerpoint.Application')
 ppt.Visible = true
 @pre = ppt.presentations.Open("C:/programmering/workspace/Groovyseminarie/dokument/groovyseminarium_source.pptx")
-
+@regexp = /\[.*\]/
 
 def replaceCodeAnchors
   @pre.Slides.each{|slide|
     slide.Shapes.each{|shape|
-      replace( shape, slide ) if shape.TextFrame.TextRange.Text =~ /\[.*\]/ 
+      replace( shape, slide ) if @regexp =~ shape.TextFrame.TextRange.Text
     }
   }
 end
@@ -16,6 +16,7 @@ end
 def replace(ole_shape, ole_slide)
   begin
     fileName = ole_shape.TextFrame.TextRange.Text
+    fileName = fileName.scan(@regexp)[0]
     fileName["["]=""
     fileName["]"]=""
     #  fileName += ".groovy"
@@ -49,8 +50,10 @@ def replace(ole_shape, ole_slide)
     ole_shape.ActionSettings.Item(onClick).Hyperlink.Address = adress
     
     generate_ruby_script fileName, adress
-  rescue
+  rescue StandardError => e
+    p "Ett fel inträffade #{e}"
   end
+
 end
 
 def generate_ruby_script(groovyFile, rubyFile)

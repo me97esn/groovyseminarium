@@ -1,6 +1,5 @@
 package se.britech.groovySeminarie.java;
 
-import java.math.BigDecimal;
 import java.util.Collection;
 
 import se.britech.groovySeminarie.groovy.Item;
@@ -8,10 +7,14 @@ import se.britech.groovySeminarie.groovy.Item;
 public class ShoppingCart {
 	Collection<Item> items;
 	
+	public void setItems(Collection<Item> items) {
+		this.items = items;
+	}
+
 	public double calcTotalPrice() {
 		double price = 0.0;
 		for (Item item : items) {
-			price += ((BigDecimal)item.getPrice()).doubleValue();
+			price += (Double)item.getPrice();
 		}
 		return price;
 	}

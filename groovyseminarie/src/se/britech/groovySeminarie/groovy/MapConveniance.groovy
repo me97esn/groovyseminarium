@@ -1,7 +1,5 @@
 package se.britech.groovySeminarie.groovy
 Map map = ["one":1, "two":2]
-print "map.getClass():"
-println map.getClass()
 println map
 
 print "map.one:"

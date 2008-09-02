@@ -63,10 +63,11 @@ def generate_ruby_script(groovyFile, rubyFile)
   f.close
 end
 
-replaceCodeAnchors
-
 # Spara som en annan fil så att vi inte råkar spara över orginalet
 @pre.SaveAs "C:/programmering/workspace/groovyseminarie/dokument/generated/generated.pptx"
+
+replaceCodeAnchors
+
 #  Run
 @pre.SlideShowSettings.Run
 

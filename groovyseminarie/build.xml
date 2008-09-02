@@ -1,71 +1,71 @@
 <project name="Groovyseminarie" default="groovycompile" basedir=".">
-    <description>
+	<description>
         simple example build file
     </description>
-    <!-- set global properties for this build -->
-    <property name="src" location="src"/>
-    <property name="lib" location="lib"/>
-    <property name="dist" location="dist"/>
-    <property name="build" location="build"/>
-    
-    <path id="my.classpath">
-        <pathelement path="${lib}"/>
-    </path>
-    
-    <taskdef name="groovyc"
-     classname="org.codehaus.groovy.ant.Groovyc">
-     	<classpath>
-				<fileset dir="${lib}">
-					<include name="**/*.jar" />
-				</fileset>
-			</classpath>
+	<!-- set global properties for this build -->
+	<property name="src" location="src" />
+	<property name="lib" location="lib" />
+	<property name="dist" location="dist" />
+	<property name="build" location="build" />
+
+	<path id="my.classpath">
+		<pathelement path="${lib}" />
+	</path>
+
+	<taskdef name="groovyc" classname="org.codehaus.groovy.ant.Groovyc">
+		<classpath>
+			<fileset dir="${lib}">
+				<include name="**/*.jar" />
+			</fileset>
+		</classpath>
 	</taskdef>
-    
-    <target name="init">
-        <!-- Create the time stamp -->
-        <tstamp/>
-        <!-- Create the build directory structure used by compile -->
-        <mkdir dir="${build}"/>
-    </target>
-    
-    <target name="compile" depends="init"
-     description="compile the source ">
-        <!-- Compile the java code from ${src} into ${build} -->
-        <javac srcdir="${src}" destdir="${build}"/>
-    </target>
-    
-    <target name="groovycompile" depends="init"
-     description="Compile both java and groovy">
-        <groovyc srcdir="${src}" destdir="${build}">
-            <classpath>
+
+	<target name="init">
+		<!-- Create the time stamp -->
+		<tstamp />
+		<!-- Create the build directory structure used by compile -->
+		<mkdir dir="${build}" />
+	</target>
+
+	<target name="compile" depends="init" description="compile the source ">
+		<!-- Compile the java code from ${src} into ${build} -->
+		<javac srcdir="${src}" destdir="${build}" />
+	</target>
+
+	<target name="groovycompile" depends="init" description="Compile both java and groovy">
+		<groovyc srcdir="${src}" destdir="${build}">
+			<classpath>
 				<fileset dir="${lib}">
 					<include name="**/*.jar" />
 				</fileset>
 			</classpath>
-            <javac source="1.6" target="1.6" debug="on"/>
-        </groovyc>
-    </target>
-    
-    <target name="dist" depends="compile"
-     description="generate the distribution">
-        <!-- Create the distribution directory -->
-        <mkdir dir="${dist}/lib"/>
-        
-        <!-- Put everything in ${build} into the MyProject-${DSTAMP}.jar file -->
-        <jar jarfile="${dist}/lib/MyProject-${DSTAMP}.jar" basedir="${build}"/>
-    </target>
-    
-	<target name="package" description="Package a jar file" depends="groovycompile">
-		<mkdir dir="${dist}"/>
-		<jar jarfile="${dist}/seminarie.jar">
-  			<fileset dir="${build}"/>
-		</jar>
+			<javac source="1.6" target="1.6" debug="on" />
+		</groovyc>
 	</target>
-	
-    <target name="clean"
-     description="clean up">
-        <!-- Delete the ${build} and ${dist} directory trees -->
-        <delete dir="${build}"/>
-        <delete dir="${dist}"/>
-    </target>
+
+	<target name="dist" depends="compile" description="generate the distribution">
+		<!-- Create the distribution directory -->
+		<mkdir dir="${dist}/lib" />
+
+		<!-- Put everything in ${build} into the MyProject-${DSTAMP}.jar file -->
+		<jar jarfile="${dist}/lib/MyProject-${DSTAMP}.jar" basedir="${build}" />
+	</target>
+
+	<target name="package" description="Package a jar file" depends="groovycompile">
+		<mkdir dir="${dist}" />
+		<jar jarfile="${dist}/seminarie.jar">
+			<fileset dir="${build}" />
+		</jar>
+		<copy todir="${dist}">
+			<fileset dir="${lib}">
+				<include name="**/*.jar" />
+			</fileset>
+		</copy>
+	</target>
+
+	<target name="clean" description="clean up">
+		<!-- Delete the ${build} and ${dist} directory trees -->
+		<delete dir="${build}" />
+		<delete dir="${dist}" />
+	</target>
 </project>

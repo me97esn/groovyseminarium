@@ -1,9 +1,6 @@
 package se.britech.groovySeminarie.java;
-
 import java.util.Collection;
-
 import se.britech.groovySeminarie.groovy.Item;
-
 public class ShoppingCart {
 	Collection<Item> items;
 	

@@ -72,12 +72,15 @@ class GroovyWithJava5Features{
 		println xstream.toXML(msg)
 	}
 }
-
-// Kör alla metoderna
-print GroovyWithJava5Features.class.methods.each{
-	if(!it.parameterTypes && it.name =~ /print_/){
-		println "******** ${it.name} ************"
-		GroovyWithJava5Features.metaClass.invokeMethod(new GroovyWithJava5Features(), it.name)
-		println ""
+class GroovyWithJava5{
+	static void main(args){
+	//	 Kör alla metoderna
+		print GroovyWithJava5Features.class.methods.each{
+			if(!it.parameterTypes && it.name =~ /print_/){
+				println "******** ${it.name} ************"
+				GroovyWithJava5Features.metaClass.invokeMethod(new GroovyWithJava5Features(), it.name)
+				println ""
+			}
+		}
 	}
 }

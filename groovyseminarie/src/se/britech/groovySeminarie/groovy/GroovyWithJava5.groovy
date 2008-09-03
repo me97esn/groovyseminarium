@@ -1,8 +1,6 @@
 package se.britech.groovySeminarie.groovy
 import com.thoughtworks.xstream.annotations.*
 import com.thoughtworks.xstream.*
-
-
 enum Meal {
 	BREAKFAST, LUNCH, DINNER
 }

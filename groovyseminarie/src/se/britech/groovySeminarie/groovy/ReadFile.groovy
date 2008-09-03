@@ -4,3 +4,4 @@ new File(url).eachLine{
 	println it
 }
 // filen stängs automatiskt när eachLine avslutas
+// (Execute Around Method pattern)

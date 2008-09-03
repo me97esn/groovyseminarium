@@ -1,11 +1,11 @@
 package se.britech.groovySeminarie.groovy
-public class Book{
+public class Magazine{
 	def pages
 	String title
 	def author
 }
 
-def book = new Book()
+def book = new Magazine()
 book.pages = 300
 book.setPages(300)
 

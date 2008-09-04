@@ -8,7 +8,7 @@ ppt.Visible = true
 def replaceCodeAnchors
   @pre.Slides.each{|slide|
     slide.Shapes.each{|shape|
-      replace( shape, slide ) if @regexp =~ shape.TextFrame.TextRange.Text
+      replace( shape, slide ) if @regexp =~ shape.TextFrame.TextRange.Text rescue nil
     }
   }
 end

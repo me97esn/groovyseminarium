@@ -2,7 +2,7 @@ require 'win32ole'
 
 ppt = WIN32OLE.new('Powerpoint.Application')
 ppt.Visible = true
-@pre = ppt.presentations.Open("C:/programmering/workspace/Groovyseminarie/dokument/groovyseminarium_source.pptx")
+@pre = ppt.presentations.Open("C:/programmering/workspace/Groovyseminarie/dokument/groovyseminarium_source_w_logo.pptx")
 @regexp = /\[\w+\.\w+\]/
 
 def replaceCodeAnchors

@@ -5,11 +5,13 @@ def aDynamicTypedVariable = "Jag är oxå en sträng" // Dynamisk typning
 aDynamicTypedVariable = 1 
 aDynamicTypedVariable = new HashMap()
 
-def aMethod(){
+void testSomething(){ // Statisk typning så att jUnit 3 hittar metoden
 	
 }
 
-def anotherhMethod(){
+// Duck typing så metoden kan returnera vad som helst, 
+// eller vara void
+def aMethod(){ 
 	return "Hello"
 }
 

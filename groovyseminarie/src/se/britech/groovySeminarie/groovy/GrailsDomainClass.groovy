@@ -1,12 +1,12 @@
 package se.britech.groovySeminarie.groovy
-class Book {
+class Book { // mappas mot tabellen "BOOK" i databasen 
    Long id
    Long version
    String title
    Date releaseDate
    String author
 }
-
+// Eftersom Book är en domän-klass finns följande metoder:
 def b = Book.findByTitle("The Shining")
 b = Book.findByTitleAndAuthor("The Sum of All Fears", "Tom Clancy")
 b = Book.findByReleaseDateBetween(firstDate, new Date())

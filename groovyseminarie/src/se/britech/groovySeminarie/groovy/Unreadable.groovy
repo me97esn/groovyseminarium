@@ -1,6 +1,6 @@
 package se.britech.groovySeminarie.groovy
 
-// Överlagra metoden "+" i Integer
+// Ändra metoden "+" i Integer
 Integer.metaClass.invokeMethod ={name, args-> 
 	if (name == "plus") {
 		print "$delegate + ${args?.getAt(0)} = "
@@ -8,5 +8,5 @@ Integer.metaClass.invokeMethod ={name, args->
 	}
 }
 
-// Nu betyder det här 1-1, koden är inte längre läslig
+// Nu betyder "+" minus, visst är det fantastiskt?
 print 1+1

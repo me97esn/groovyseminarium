@@ -5,6 +5,9 @@ public class Nullsafe {
 		if (aParameter != null && 
 				aParameter.length() > 0) {
 			// ...
+		}else{
+			System.out.println(
+					"Felaktig input");
 		}
 	}
 }

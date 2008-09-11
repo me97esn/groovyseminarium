@@ -1,18 +1,19 @@
 package se.britech.groovySeminarie.groovy
 ArrayList list = ["Britech", "Vinity"]
-print "list.class: "
-print list.class
-
-print "\nlist[0]:"
+println list.class
 println list[0]
 
-list << "Mälardalen" 
-print 'list << "Mälardalen":'
-println list
+list.each{ println it }
+list.eachWithIndex{item, i-> 
+	println item + ":" +  i 
+}
+println list.collect{ it.toUpperCase()}
 
-print "list.reverse():"
+println list.findAll{it =~ /Bri.*/}
+
+list << "Mälardalen" 
+
 println list.reverse()
 
-print 'list + ["Claremont", "Clarity"]:'
 println list + ["Claremont", "Clarity"]
 

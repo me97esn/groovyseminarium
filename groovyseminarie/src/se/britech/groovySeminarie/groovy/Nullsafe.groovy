@@ -9,4 +9,4 @@ void aMethod(String aParameter) {
 
 aMethod( null )
 aMethod( "" )
-aMethod( "Hej" )
+aMethod "Hej" 

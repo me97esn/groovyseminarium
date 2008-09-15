@@ -10,5 +10,5 @@ Integer.metaClass.propertyMissing ={name->
 	}
 }
 
-println 4.days.ago 
+print 4.days.ago 
 

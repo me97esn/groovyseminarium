@@ -5,6 +5,7 @@ public class TestGroovyTruth extends TestCase{
 		assert true
 		assert !false
 		assert 1
+		assert -1
 		assert !0		
 		assert !null		
 		assert "Britech"

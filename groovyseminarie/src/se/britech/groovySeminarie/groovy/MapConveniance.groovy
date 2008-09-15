@@ -1,5 +1,5 @@
 package se.britech.groovySeminarie.groovy
-Map map = ["one":1, "two":2]
+LinkedHashMap map = ["one":1, "two":2]
 
 println map.one
 

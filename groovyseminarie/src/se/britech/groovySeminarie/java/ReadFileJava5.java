@@ -13,7 +13,7 @@ public class ReadFileJava5 {
 		} catch (FileNotFoundException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
-		}
+		} 
 		while (scanner.hasNextLine()) {
 			System.out.println(scanner.nextLine());
 		}

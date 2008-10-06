@@ -1,5 +1,12 @@
 package se.britech.groovySeminarie.groovy
+
+ArrayList list0 = new ArrayList()
+list0.add("Britech")
+list0.add("Vinity")
+
+// Samma sak som:
 ArrayList list = ["Britech", "Vinity"]
+
 println list.class
 println list[0]
 

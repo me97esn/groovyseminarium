@@ -8,4 +8,4 @@ list.each{
 	println it
 }
 
-println list.findAll{ it.startsWith("h") }
+println list.findAll{ it.startsWith("he") || it.size() >= 3 }

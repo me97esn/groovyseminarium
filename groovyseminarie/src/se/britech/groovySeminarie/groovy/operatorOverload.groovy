@@ -1,4 +1,7 @@
 package se.britech.groovySeminarie.groovy
+Object a = new Object()
+Object b = new Object()
+
 a + b    		//a.plus(b)
 a - b    		//a.minus(b)
 a * b    		//a.multiply(b)

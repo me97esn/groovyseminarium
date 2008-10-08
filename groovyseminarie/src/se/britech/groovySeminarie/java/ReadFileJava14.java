@@ -6,7 +6,7 @@ public class ReadFileJava14 {
 	public static void main(String args[]) {
 		FileInputStream fin = null;
 		try {
-			fin = new FileInputStream("C:/programmering/workspace/groovyseminarie/dokument/aFileWithText.txt");
+			fin = new FileInputStream("C:/text.txt");
 			DataInputStream dataInputStream = new DataInputStream(fin);
 			while (dataInputStream.available() > 0) {
 				System.out.println(dataInputStream.readLine());

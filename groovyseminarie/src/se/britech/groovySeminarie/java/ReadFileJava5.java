@@ -6,7 +6,7 @@ import java.util.Scanner;
 
 public class ReadFileJava5 {
 	public static void main(String[] args) {
-		File f = new File("C:/programmering/workspace/groovyseminarie/dokument/aFileWithText.txt");
+		File f = new File("C:/text.txt");
 		Scanner scanner = null;
 		try {
 			scanner = new Scanner(f);

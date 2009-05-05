@@ -1,14 +1,14 @@
 package se.britech.groovySeminarie.groovy
 
-Integer.metaClass.propertyMissing ={name-> 
-	if (name == "days") {
-		return delegate * 24 * 60 * 60 * 1000
-	}else if(name == "ago"){
-		def time = new Date().time
-		time -= delegate
-		return new Date(time:time)
-	}
+Integer.metaClass.getDays = { 
+	delegate * 24 * 60 * 60 * 1000
 }
+
+Integer.metaClass.getAgo = {
+    def time = new Date().time
+	time -= delegate
+	return new Date(time:time)
+} 
 
 print 4.days.ago 
 

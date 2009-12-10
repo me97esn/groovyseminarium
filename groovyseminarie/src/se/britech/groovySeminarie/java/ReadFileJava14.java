@@ -3,8 +3,8 @@ import java.io.DataInputStream;
 import java.io.FileInputStream;
 import java.io.IOException;
 public class ReadFileJava14 {
+	static FileInputStream fin = null;
 	public static void main(String args[]) {
-		FileInputStream fin = null;
 		try {
 			fin = new FileInputStream("C:/text.txt");
 			DataInputStream dataInputStream = new DataInputStream(fin);

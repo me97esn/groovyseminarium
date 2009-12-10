@@ -5,8 +5,8 @@ import java.io.FileNotFoundException;
 import java.util.Scanner;
 
 public class ReadFileJava5 {
+	static File f = new File("C:/text.txt");
 	public static void main(String[] args) {
-		File f = new File("C:/text.txt");
 		Scanner scanner = null;
 		try {
 			scanner = new Scanner(f);

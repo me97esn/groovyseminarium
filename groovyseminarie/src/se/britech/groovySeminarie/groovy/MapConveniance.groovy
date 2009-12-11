@@ -13,10 +13,6 @@ map["three"] = 3
 // Samma sak som :
 map.put("three", 3)
 
-println map.containsKey("one")
-
-println map.containsValue(2)
-
 map.each{key, value -> 
 	println key + "=" + value	
 }

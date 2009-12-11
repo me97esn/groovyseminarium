@@ -5,6 +5,7 @@ class FileInIde
     a.WinActivate "Java"
     a.Send "^+r"
     a.Send name
+    sleep 0.2
     a.Send "{Enter}"
   end
 end

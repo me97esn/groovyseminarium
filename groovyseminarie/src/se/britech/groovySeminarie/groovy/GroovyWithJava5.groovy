@@ -1,7 +1,7 @@
 package se.britech.groovySeminarie.groovy
 import com.thoughtworks.xstream.annotations.*
 import com.thoughtworks.xstream.*
-enum Meal {
+/*enum Meal {
 	BREAKFAST, LUNCH, DINNER
 }
 
@@ -72,7 +72,7 @@ class GroovyWithJava5Features{
 }
 class GroovyWithJava5{
 	static void main(args){
-	//	 Kör alla metoderna
+	//	 Kï¿½r alla metoderna
 		print GroovyWithJava5Features.class.methods.each{
 			if(!it.parameterTypes && it.name =~ /print_/){
 				println "******** ${it.name} ************"
@@ -82,3 +82,4 @@ class GroovyWithJava5{
 		}
 	}
 }
+*/

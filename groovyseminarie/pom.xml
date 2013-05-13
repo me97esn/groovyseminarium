@@ -1,0 +1,159 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>groovypresentation</groupId>
+	<artifactId>groovypresentation</artifactId>
+	<version>1.0</version>
+	<packaging>jar</packaging>
+	<name>groovypresentation</name>
+	
+	<properties>
+		<!-- Build properties -->
+		<project.build.sourceEncoding>utf-8</project.build.sourceEncoding>
+		<project.reporting.outputEncoding>utf-8</project.reporting.outputEncoding>
+	</properties>
+
+	<scm>
+		<connection>scm:svn:https://svn2.hosted-projects.com/claremont/SEBTrout/trout</connection>
+		<developerConnection>scm:svn:https://svn2.hosted-projects.com/claremont/SEBTrout/trout</developerConnection>
+		<url>https://svn2.hosted-projects.com/claremont/SEBTrout/trout</url>
+	</scm>
+
+
+	<dependencies>
+		<dependency>
+			<groupId>org.codehaus.groovy</groupId>
+			<artifactId>groovy-all</artifactId>
+			<version>1.8.6</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>4.10</version>
+		</dependency>
+		
+	</dependencies>
+
+
+	<build>
+		<resources>
+			<resource>
+				<directory>src/main/resources</directory>
+				<excludes>
+					<exclude>trout.properties</exclude>
+				</excludes>
+			</resource>
+		</resources>
+		<plugins>
+		      
+			<plugin>
+				<groupId>org.codehaus.gmaven</groupId>
+				<artifactId>gmaven-plugin</artifactId>
+				<version>1.2</version>
+				<configuration>
+					<providerSelection>1.7</providerSelection>
+				</configuration>
+				<dependencies>
+					<dependency>
+						<groupId>org.codehaus.gmaven.runtime</groupId>
+						<artifactId>gmaven-runtime-1.7</artifactId>
+						<version>1.2</version>
+						<exclusions>
+							<exclusion>
+								<groupId>org.codehaus.groovy</groupId>
+								<artifactId>groovy-all</artifactId>
+							</exclusion>
+						</exclusions>
+					</dependency>
+					<dependency>
+						<groupId>org.codehaus.groovy</groupId>
+						<artifactId>groovy-all</artifactId>
+						<version>1.7.0</version>
+					</dependency>
+				</dependencies>
+				<executions>
+					<execution>
+						<goals>
+							<goal>generateStubs</goal>
+							<goal>compile</goal>
+							<goal>generateTestStubs</goal>
+							<goal>testCompile</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>2.1</version>
+				<configuration>
+					<target>1.6</target>
+					<source>1.6</source>
+				</configuration>
+			</plugin>
+
+			<plugin>
+				<artifactId>maven-eclipse-plugin</artifactId>
+				<configuration>
+					<wtpversion>1.5</wtpversion>
+				</configuration>
+			</plugin>
+
+			<plugin>
+				<artifactId>maven-war-plugin</artifactId>
+				<version>2.1-beta-1</version>
+				<configuration>
+					<packagingExcludes>WEB-INF/classes/*.jar</packagingExcludes>
+					<archive>
+						<manifest>
+							<addDefaultImplementationEntries>true</addDefaultImplementationEntries>
+							<addDefaultSpecificationEntries>false</addDefaultSpecificationEntries>
+						</manifest>
+						<manifestEntries>
+							<Subversion-Revision>${buildNumber}</Subversion-Revision>
+							<Built-At>${timestamp}</Built-At>
+							<Description>${project.description}</Description>
+							<Architecture>${os.name} ${os.version} (${os.arch})</Architecture>
+							<Group-Id>${project.groupId}</Group-Id>
+							<Artifact-Id>${project.artifactId}</Artifact-Id>
+							<Build-Profile>${build.profile}</Build-Profile>
+						</manifestEntries>
+					</archive>
+				</configuration>
+			</plugin>
+
+			<plugin>
+				<groupId>org.mortbay.jetty</groupId>
+				<artifactId>maven-jetty-plugin</artifactId>
+				<version>6.1.9</version>
+			</plugin>
+
+			<plugin>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>buildnumber-maven-plugin</artifactId>
+				<executions>
+					<execution>
+						<phase>validate</phase>
+						<goals>
+							<goal>create</goal>
+						</goals>
+
+						<configuration>
+							<doUpdate>false</doUpdate>
+							<getRevisionOnlyOnce>true</getRevisionOnlyOnce>
+							<timestampFormat>{0,date,yyyy-MM-dd HH:mm:ss}</timestampFormat>
+							<revisionOnScmFailure>?.?.?</revisionOnScmFailure>
+						</configuration>
+
+					</execution>
+				</executions>
+			</plugin>
+
+		</plugins>
+	</build>
+
+	
+
+	
+</project>

@@ -12,6 +12,9 @@ import org.newdawn.slick.Color
  */
 class WorldBuilderTests extends GroovyTestCase {
 
+
+
+
     void test_build_with_radius() {
         def behaviours = [[action:new Behaviours().randomMove, desc:"randomMove"]]
 

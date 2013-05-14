@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite errors="0" failures="0" hostname="c-f16ee253.1325-1-64736c21.cust.bredbandsbolaget.se" name="myevolution.WorldBuilderTests" tests="4" time="0.344" timestamp="2011-03-29T19:15:00">
+  <properties />
+  <testcase classname="myevolution.WorldBuilderTests" name="test_build" time="0.258" />
+  <testcase classname="myevolution.WorldBuilderTests" name="test_build_with_simple_food" time="0.025" />
+  <testcase classname="myevolution.WorldBuilderTests" name="test_build_with_behaviours" time="0.035" />
+  <testcase classname="myevolution.WorldBuilderTests" name="test_build_with_radius" time="0.014" />
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

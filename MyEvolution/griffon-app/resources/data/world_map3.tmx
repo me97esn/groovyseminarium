@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" width="30" height="15" tilewidth="32" tileheight="32">
+ <tileset firstgid="1" name="grass" tilewidth="32" tileheight="32">
+  <image source="grass.jpg" width="79" height="79"/>
+  <tile id="0">
+   <properties>
+    <property name="blocked" value="true"/>
+   </properties>
+  </tile>
+ </tileset>
+ <tileset firstgid="5" name="white" tilewidth="32" tileheight="32">
+  <image source="white_960x480.png" width="960" height="480"/>
+ </tileset>
+ <tileset firstgid="455" name="white_96_x_96" tilewidth="32" tileheight="32">
+  <image source="white_960x480.png" width="960" height="480"/>
+ </tileset>
+ <tileset firstgid="905" name="white_960x480" tilewidth="64" tileheight="64">
+  <image source="white_960x480.png" width="960" height="480"/>
+ </tileset>
+ <layer name="Background, unique tiles" width="30" height="15">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAAw3DA5QQBgAA0IuXbV+2zcu2bdvWXb5s27bNLbshuy0OYaj+e/9HCggIiGygUYxqNKMbw5jGMrZxjGs845vAhCYysUlMajKTm8KUpjK1aQwyrelMbwYzmsnMZjGr2cxuDnOay9zmMa/5zG8BC1rIwhaxqMUsbglLWspgS1vGspazvBWsaCUrW8WqVrO6NaxpLWtbx7rWs74NbGgjG9vEpjazuS1saStb28a2trO9HexoJzvbxa52s7s97Gkve9vHvvazvwMc6CAHO8ShDnO4IxzpKEcbYqhjHOs4xzvBiU4yzMlOcarTnO4MZzrL2c5xrvOc7wIXusjFLnGpy1zuCle6ytWuca3rXO8GN7rJzW5xq9vc7g53usvd7nGv+9zvAQ96yMMe8ajHPO4JT3rK057xrOf8wR897wUvesnLXvGq17zuDW96y9ve8Sd/9hd/9a73vO8DH/rIxz7xqc987gtf+srf/N3XvvGt73zvB//wT//ybz/6yc9+8R//9T//96vfDAiH4Y1gRCMZ2UCjGNVoRjeGMY1lbOMY13jGN4EJTWRik5jUZCY3hSlNZWrTGGRa05neDGY0k5nNYlazmd0c5jSXuc1jXvOZ3wIWtJCFLWJRi1ncEpa0lMGWtoxlLWd5K1jRSla2ilWtZnVrWNNa1raOda1nfRvY0EY2tolNbWZzW9jSVra2jW1tZ3s72NFOdraLXe1md3vY0172to997Wd/BzjQQQ52iEMd5nBHONJRjjbEUMc41nGOd4ITnWSYk53iVKc53RnOdJazneNc5znfBS50kYtd4lKXudwVrnSVq13jWte53g1udJOb3eJWt7ndHe50l7vd4173ud8DHvSQhz3iUY953BOe9JSnPeNZvwNQkROKCAcAAA==
+  </data>
+ </layer>
+ <layer name="Blocking tiles" width="30" height="15">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAA2NkYGBgHCBMbzBq76i9o/aO2jtq7+C2dyAwAGt9HVEIBwAA
+  </data>
+ </layer>
+ <objectgroup name="Organisms layer" width="30" height="15"/>
+</map>

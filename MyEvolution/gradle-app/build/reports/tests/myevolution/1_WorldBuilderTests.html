@@ -1,0 +1,81 @@
+<html xmlns:lxslt="http://xml.apache.org/xslt" xmlns:stringutils="xalan://org.apache.tools.ant.util.StringUtils">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=US-ASCII">
+<title>Unit Test Results: myevolution.WorldBuilderTests</title>
+<link rel="stylesheet" type="text/css" title="Style" href="../stylesheet.css">
+<script type="text/javascript" language="JavaScript">
+        var TestCases = new Array();
+        var cur;
+        
+    cur = TestCases['myevolution.WorldBuilderTests'] = new Array();
+    </script><script type="text/javascript" language="JavaScript">
+        function displayProperties (name) {
+          var win = window.open('','JUnitSystemProperties','scrollbars=1,resizable=1');
+          var doc = win.document;
+          doc.open();
+          doc.write("<html><head><title>Properties of " + name + "</title>");
+          doc.write("<style type=\"text/css\">");
+          doc.write("body {font:normal 68% verdana,arial,helvetica; color:#000000; }");
+          doc.write("table tr td, table tr th { font-size: 68%; }");
+          doc.write("table.properties { border-collapse:collapse; border-left:solid 1 #cccccc; border-top:solid 1 #cccccc; padding:5px; }");
+          doc.write("table.properties th { text-align:left; border-right:solid 1 #cccccc; border-bottom:solid 1 #cccccc; background-color:#eeeeee; }");
+          doc.write("table.properties td { font:normal; text-align:left; border-right:solid 1 #cccccc; border-bottom:solid 1 #cccccc; background-color:#fffffff; }");
+          doc.write("h3 { margin-bottom: 0.5em; font: bold 115% verdana,arial,helvetica }");
+          doc.write("</style>");
+          doc.write("</head><body>");
+          doc.write("<h3>Properties of " + name + "</h3>");
+          doc.write("<div align=\"right\"><a href=\"javascript:window.close();\">Close</a></div>");
+          doc.write("<table class='properties'>");
+          doc.write("<tr><th>Name</th><th>Value</th></tr>");
+          for (prop in TestCases[name]) {
+            doc.write("<tr><th>" + prop + "</th><td>" + TestCases[name][prop] + "</td></tr>");
+          }
+          doc.write("</table>");
+          doc.write("</body></html>");
+          doc.close();
+          win.focus();
+        }
+      
+      </script>
+</head>
+<body>
+<h1>Unit Test Results.</h1>
+<table width="100%">
+<tr>
+<td align="left"></td><td align="right">Designed for use with <a href="http://www.junit.org/">JUnit</a> and <a href="http://ant.apache.org/">Ant</a>.</td>
+</tr>
+</table>
+<hr size="1">
+<h3>Class myevolution.WorldBuilderTests</h3>
+<table class="details" border="0" cellpadding="5" cellspacing="2" width="95%">
+<tr valign="top">
+<th width="80%">Name</th><th>Tests</th><th>Errors</th><th>Failures</th><th nowrap>Time(s)</th><th nowrap>Time Stamp</th><th>Host</th>
+</tr>
+<tr valign="top" class="Failure">
+<td><a title="Display all tests" href="1_WorldBuilderTests.html">WorldBuilderTests</a></td><td><a title="Display all tests" href="1_WorldBuilderTests.html">1</a></td><td>0</td><td><a title="Display only failures" href="1_WorldBuilderTests-fails.html">1</a></td><td>0.054</td><td>2011-03-01T08:50:15</td><td>c-986de253.1325-1-64736c21.cust.bredbandsbolaget.se</td>
+</tr>
+</table>
+<h2>Tests</h2>
+<table class="details" border="0" cellpadding="5" cellspacing="2" width="95%">
+<tr valign="top">
+<th>Name</th><th>Status</th><th width="80%">Type</th><th nowrap>Time(s)</th>
+</tr>
+<tr valign="top" class="Failure">
+<td><a name="test_build"></a>test_build</td><td>Failure</td><td>groovy.lang.GroovyRuntimeException: Could not find matching constructor for: myevolution.Organism(java.util.LinkedHashMap)<br>
+<br>
+<code>groovy.lang.GroovyRuntimeException: Could not find matching constructor for: myevolution.Organism(java.util.LinkedHashMap)<br>	at groovy.lang.MetaClassImpl.invokeConstructor(MetaClassImpl.java:1481)<br>	at groovy.lang.MetaClassImpl.invokeConstructor(MetaClassImpl.java:1397)<br>	at org.codehaus.groovy.runtime.callsite.MetaClassConstructorSite.callConstructor(MetaClassConstructorSite.java:46)<br>	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallConstructor(CallSiteArray.java:52)<br>	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:190)<br>	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:198)<br>	at myevolution.WorldBuilder$_getProperty_closure1.doCall(WorldBuilder.groovy:25)<br>	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)<br>	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)<br>	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)<br>	at java.lang.reflect.Method.invoke(Method.java:597)<br>	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:88)<br>	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:233)<br>	at org.codehaus.groovy.runtime.metaclass.ClosureMetaClass.invokeMethod(ClosureMetaClass.java:273)<br>	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:886)<br>	at groovy.lang.Closure.call(Closure.java:276)<br>	at org.codehaus.groovy.runtime.DefaultGroovyMethods.eachWithIndex(DefaultGroovyMethods.java:1191)<br>	at org.codehaus.groovy.runtime.dgm$149.invoke(Unknown Source)<br>	at org.codehaus.groovy.runtime.callsite.PojoMetaMethodSite$PojoMetaMethodSiteNoUnwrapNoCoerce.invoke(PojoMetaMethodSite.java:270)<br>	at org.codehaus.groovy.runtime.callsite.PojoMetaMethodSite.call(PojoMetaMethodSite.java:52)<br>	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:40)<br>	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:116)<br>	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:124)<br>	at myevolution.WorldBuilder.getProperty(WorldBuilder.groovy:22)<br>	at org.codehaus.groovy.runtime.InvokerHelper.getProperty(InvokerHelper.java:156)<br>	at groovy.lang.Closure.getPropertyTryThese(Closure.java:191)<br>	at groovy.lang.Closure.getPropertyDelegateFirst(Closure.java:181)<br>	at groovy.lang.Closure.getProperty(Closure.java:166)<br>	at org.codehaus.groovy.runtime.callsite.PogoGetPropertySite.getProperty(PogoGetPropertySite.java:47)<br>	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callGroovyObjectGetProperty(AbstractCallSite.java:239)<br>	at myevolution.WorldBuilderTests$_test_build_closure1.doCall(WorldBuilderTests.groovy:13)<br>	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)<br>	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)<br>	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)<br>	at java.lang.reflect.Method.invoke(Method.java:597)<br>	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:88)<br>	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:233)<br>	at org.codehaus.groovy.runtime.metaclass.ClosureMetaClass.invokeMethod(ClosureMetaClass.java:273)<br>	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:886)<br>	at groovy.lang.Closure.call(Closure.java:276)<br>	at groovy.lang.Closure.call(Closure.java:289)<br>	at org.codehaus.groovy.runtime.DefaultGroovyMethods.with(DefaultGroovyMethods.java:167)<br>	at org.codehaus.groovy.runtime.dgm$712.invoke(Unknown Source)<br>	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoMetaMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:307)<br>	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.call(PogoMetaMethodSite.java:63)<br>	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:40)<br>	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:116)<br>	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:124)<br>	at myevolution.WorldBuilderTests.test_build(WorldBuilderTests.groovy:12)<br>	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)<br>	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)<br>	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)<br>	at java.lang.reflect.Method.invoke(Method.java:597)<br>	at junit.framework.TestCase.runTest(TestCase.java:168)<br>	at junit.framework.TestCase.runBare(TestCase.java:134)<br>	at junit.framework.TestResult$1.protect(TestResult.java:110)<br>	at junit.framework.TestResult.runProtected(TestResult.java:128)<br>	at junit.framework.TestResult.run(TestResult.java:113)<br>	at junit.framework.TestCase.run(TestCase.java:124)<br>	at junit.framework.TestSuite.runTest(TestSuite.java:232)<br>	at junit.framework.TestSuite.run(TestSuite.java:227)<br>	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecuter.execute(JUnitTestClassExecuter.java:51)<br>	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassProcessor.processTestClass(JUnitTestClassProcessor.java:63)<br>	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.processTestClass(SuiteTestClassProcessor.java:49)<br>	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)<br>	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)<br>	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)<br>	at java.lang.reflect.Method.invoke(Method.java:597)<br>	at org.gradle.messaging.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:32)<br>	at org.gradle.messaging.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:23)<br>	at org.gradle.messaging.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:32)<br>	at org.gradle.messaging.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:75)<br>	at $Proxy4.processTestClass(Unknown Source)<br>	at org.gradle.api.internal.tasks.testing.worker.TestWorker.processTestClass(TestWorker.java:86)<br>	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)<br>	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)<br>	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)<br>	at java.lang.reflect.Method.invoke(Method.java:597)<br>	at org.gradle.messaging.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:32)<br>	at org.gradle.messaging.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:23)<br>	at org.gradle.messaging.remote.internal.MethodInvocationUnmarshallingDispatch.dispatch(MethodInvocationUnmarshallingDispatch.java:48)<br>	at org.gradle.messaging.dispatch.DiscardOnFailureDispatch.dispatch(DiscardOnFailureDispatch.java:31)<br>	at org.gradle.messaging.dispatch.AsyncDispatch.dispatchMessages(AsyncDispatch.java:131)<br>	at org.gradle.messaging.dispatch.AsyncDispatch.access$000(AsyncDispatch.java:35)<br>	at org.gradle.messaging.dispatch.AsyncDispatch$1.run(AsyncDispatch.java:71)<br>	at org.gradle.messaging.concurrent.DefaultExecutorFactory$StoppableExecutorImpl$1.run(DefaultExecutorFactory.java:63)<br>	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:886)<br>	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:908)<br>	at java.lang.Thread.run(Thread.java:637)<br>
+</code></td><td>0.038</td>
+</tr>
+</table>
+<div class="Properties">
+<a href="javascript:displayProperties('myevolution.WorldBuilderTests');">
+                    Properties &raquo;
+                </a>
+</div>
+<div class="Properties">
+<a href="./1_WorldBuilderTests-out.txt">
+                        System.out &raquo;
+                    </a>
+</div>
+</body>
+</html>

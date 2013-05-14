@@ -22,9 +22,6 @@ DateTime.metaClass.invokeMethod ={name, args->
 	}
 }
 
-
-
-
 /*************************/
 println 4.days.ago + 11.hours
 println 4.days.ago.class

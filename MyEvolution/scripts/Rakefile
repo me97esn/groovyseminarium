@@ -1,0 +1,18 @@
+task :default => [:insert]
+
+task :insert do
+   require 'watir-webdriver'
+          browser = Watir::Browser.new(:firefox)
+          browser.goto "http://me97esn.tadalist.com/lists/1882547"
+          browser.text_field(:id, "password").set "Fispl0pp"
+          browser.form(:id, "loginForm").submit
+
+          browser.goto "http://me97esn.tadalist.com/lists/1882547"
+          addItem = browser.link(:text, "Add another item")
+          addItem.click if addItem.exist?
+          %w[sangklader och badlakan badklader oronproppar badmossa toaring pall toapapper degskrapa kokshandduk].each{|line|
+              p line
+              browser.text_field(:id, "item_content").set "#{line}\n"
+          }
+end
+

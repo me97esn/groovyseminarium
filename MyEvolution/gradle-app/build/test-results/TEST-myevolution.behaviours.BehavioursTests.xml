@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite errors="0" failures="0" hostname="c-f16ee253.1325-1-64736c21.cust.bredbandsbolaget.se" name="myevolution.behaviours.BehavioursTests" tests="1" time="0.034" timestamp="2011-03-29T19:15:01">
+  <properties />
+  <testcase classname="myevolution.behaviours.BehavioursTests" name="test_parameters_to_closure" time="0.025" />
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

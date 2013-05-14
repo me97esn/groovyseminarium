@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite errors="0" failures="0" hostname="c-f16ee253.1325-1-64736c21.cust.bredbandsbolaget.se" name="myevolution.behaviours.DieTests" tests="2" time="0.081" timestamp="2011-03-29T19:15:01">
+  <properties />
+  <testcase classname="myevolution.behaviours.DieTests" name="test_should_die" time="0.034" />
+  <testcase classname="myevolution.behaviours.DieTests" name="test_should_not_die" time="0.037" />
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

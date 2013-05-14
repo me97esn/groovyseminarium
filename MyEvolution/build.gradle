@@ -1,0 +1,36 @@
+apply plugin: 'java'
+apply plugin: 'groovy'
+apply plugin: 'eclipse'
+
+defaultTasks 'test'
+
+sourceCompatibility = 1.6
+
+//println "this: $properties"
+//properties.each{println it}
+
+repositories {
+    mavenCentral()
+    mavenRepo urls: "http://svn.codehaus.org/griffon/plugins/griffon-slick/trunk/lib/"
+}
+
+// TODO behöver få med griffon default dependencies
+
+dependencies {
+    compile('org.newdawn:slick:274') {
+        artifact {
+            name = 'slick'
+            extension = 'jar'
+            url = 'http://svn.codehaus.org/griffon/plugins/griffon-slick/trunk/lib/slick-274.jar'
+            type = "jar"
+        }
+    }
+    //        'com.jcraft:jorbis:0.0.17'
+    compile group: 'org.gmock', name: 'gmock', version: '0.8.1'
+    //testCompile group: 'junit', name: 'junit', version: '4.+'
+    groovy group: 'org.codehaus.groovy', name: 'groovy', version: '1.7.6'
+}
+
+task hello << {
+    println 'Hello world!'
+}

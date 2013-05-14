@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite errors="0" failures="0" hostname="c-946fe253.1325-1-64736c21.cust.bredbandsbolaget.se" name="myevolution.integration.CollisionTests" tests="1" time="0.147" timestamp="2011-03-07T21:35:56">
+  <properties />
+  <testcase classname="myevolution.integration.CollisionTests" name="test_collide" time="0.137" />
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

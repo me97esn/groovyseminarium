@@ -1,0 +1,25 @@
+	<html>
+	  <head>
+	    <title>Canvas tutorial</title>
+	    <script type="text/javascript">
+	      function draw() {
+	      var canvas = document.getElementById("canvas");
+	      if (canvas.getContext) {
+	        var ctx = canvas.getContext("2d");
+	 
+	        ctx.fillStyle = "rgb(200,0,0)";
+	        ctx.fillRect (10, 10, 55, 50);
+	 
+	        ctx.fillStyle = "rgba(0, 0, 200, 0.5)";
+	        ctx.fillRect (30, 30, 55, 50);
+	      }
+	    }
+	    </script>
+	    <style type="text/css">
+	      canvas { border: 1px solid black; }
+	    </style>
+	  </head>
+	  <body onload="window.setInterval(draw, 300);">
+	    <canvas id="canvas" width="960" height="480"></canvas>
+	  </body>
+	</html>

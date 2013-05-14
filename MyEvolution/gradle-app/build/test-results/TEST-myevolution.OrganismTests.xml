@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite errors="0" failures="0" hostname="c-f16ee253.1325-1-64736c21.cust.bredbandsbolaget.se" name="myevolution.OrganismTests" tests="6" time="0.265" timestamp="2011-03-29T19:15:00">
+  <properties />
+  <testcase classname="myevolution.OrganismTests" name="testCalcDirection" time="0.025" />
+  <testcase classname="myevolution.OrganismTests" name="test_that_direction_equals_direction_of_organism" time="0.0040" />
+  <testcase classname="myevolution.OrganismTests" name="testCalcDistance" time="0.0070" />
+  <testcase classname="myevolution.OrganismTests" name="test_match_perfect_match" time="0.022" />
+  <testcase classname="myevolution.OrganismTests" name="test_match_different_length" time="0.0060" />
+  <testcase classname="myevolution.OrganismTests" name="test_collides_no_other_organisms" time="0.144" />
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

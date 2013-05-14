@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite errors="0" failures="0" hostname="c-f16ee253.1325-1-64736c21.cust.bredbandsbolaget.se" name="myevolution.WorldTests" tests="6" time="0.298" timestamp="2011-03-29T19:15:01">
+  <properties />
+  <testcase classname="myevolution.WorldTests" name="test_all_organism_ids_are_unique" time="0.0040" />
+  <testcase classname="myevolution.WorldTests" name="test_representSituation_touches_food" time="0.134" />
+  <testcase classname="myevolution.WorldTests" name="test_representSituation_dont_touch_food" time="0.055" />
+  <testcase classname="myevolution.WorldTests" name="test_is_blocked" time="0.059" />
+  <testcase classname="myevolution.WorldTests" name="test_is_not_blocked" time="0.032" />
+  <testcase classname="myevolution.WorldTests" name="test_all_duplicated_organism_ids" time="0.0040" />
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite errors="0" failures="0" hostname="c-f16ee253.1325-1-64736c21.cust.bredbandsbolaget.se" name="myevolution.behaviours.ChooseBehaviourTests" tests="3" time="0.29" timestamp="2011-03-29T19:15:01">
+  <properties />
+  <testcase classname="myevolution.behaviours.ChooseBehaviourTests" name="test_no_match_should_never_invoke_randomMove" time="0.1" />
+  <testcase classname="myevolution.behaviours.ChooseBehaviourTests" name="test_perfekt_match_should_always_invoke_randomMove" time="0.076" />
+  <testcase classname="myevolution.behaviours.ChooseBehaviourTests" name="test_partial_match_should_curry_randomMove_with_partial_match" time="0.082" />
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

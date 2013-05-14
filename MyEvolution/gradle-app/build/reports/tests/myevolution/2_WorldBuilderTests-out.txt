@@ -1,0 +1,10 @@
+create an organism with: centerx:9+1, centery:1, radius: 1
+create an organism with: centerx:15+1, centery:1, radius: 1
+get the property with name: _________1_____2
+create an organism with: centerx:2+1, centery:2, radius: 1
+create an organism with: centerx:5+1, centery:2, radius: 1
+create an organism with: centerx:11+1, centery:2, radius: 1
+create an organism with: centerx:15+1, centery:2, radius: 1
+get the property with name: __3__4_____a___6
+get the property with name: ________________
+

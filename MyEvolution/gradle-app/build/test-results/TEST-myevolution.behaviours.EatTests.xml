@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite errors="0" failures="0" hostname="c-f16ee253.1325-1-64736c21.cust.bredbandsbolaget.se" name="myevolution.behaviours.EatTests" tests="2" time="0.077" timestamp="2011-03-29T19:15:01">
+  <properties />
+  <testcase classname="myevolution.behaviours.EatTests" name="test_eat_nothing_to_eat" time="0.022" />
+  <testcase classname="myevolution.behaviours.EatTests" name="test_eat_something_to_eat" time="0.039" />
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

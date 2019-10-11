@@ -7,7 +7,7 @@ import java.util.*;
 import java.io.*;
 import java.net.*;
 
-public class ArrayConveniance
+public class ArrayConvenience
   extends groovy.lang.Script {
 public ArrayConveniance
 () {}
